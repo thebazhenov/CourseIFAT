@@ -11,7 +11,6 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pages.LoginPage;
 import pages.ProductsPage;
-import utils.AllureUtils;
 import utils.PropertyReader;
 
 
@@ -53,9 +52,6 @@ public class BaseTest {
     @AfterMethod
     @Description("Закрытие")
     public void close(ITestResult result) {
-          if (ITestResult.FAILURE == result.getStatus()) {
-                AllureUtils.takeScreenshot(driver);
-            }
         driver.quit();
     }
 }
