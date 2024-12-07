@@ -54,5 +54,3 @@ public class ProductsTest extends BaseTest{
         assertEquals(productsPage.checkCartBadge(), 3);
     }
 }
-
-

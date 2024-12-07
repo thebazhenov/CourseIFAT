@@ -5,7 +5,8 @@ import org.testng.annotations.Test;
 import io.qameta.allure.*;
 import utils.PropertyReader;
 
-import static org.testng.AssertJUnit.assertEquals;
+
+import static org.testng.Assert.assertEquals;
 import static pages.BasePage.BASE_URL;
 
 public class LoginTest extends BaseTest {
@@ -18,7 +19,7 @@ public class LoginTest extends BaseTest {
         loginPage
                 .open()
                 .login(user, password);
-        assertEquals(BASE_URL + "inventory.html", driver.getCurrentUrl());
+        assertEquals(driver.getCurrentUrl(), BASE_URL + "inventory.html");
     }
 
     @Epic("Модуль авторизации магазина")
@@ -29,7 +30,7 @@ public class LoginTest extends BaseTest {
         loginPage
                 .open()
                 .login("locked_out_user", password);
-        assertEquals("Epic sadface: Sorry, this user has been locked out.", loginPage.errorAlertText());
+        assertEquals(loginPage.errorAlertText(), "Epic sadface: Sorry, this user has been locked out.");
     }
 
     @DataProvider(name = "loginOrPasswordData")
@@ -50,8 +51,6 @@ public class LoginTest extends BaseTest {
         loginPage
                 .open()
                 .login(user,pass);
-        assertEquals(exception, loginPage.errorAlertText());
+        assertEquals(loginPage.errorAlertText(), exception);
     }
 }
-
-
