@@ -15,8 +15,9 @@ public class LoginTest extends BaseTest {
     @Description("Проверка входа в систему с корректными данными")
     @Test
     public void correctLogin() {
-        loginPage.open()
-                        .login(user, password);
+        loginPage
+                .open()
+                .login(user, password);
         assertEquals(BASE_URL + "inventory.html", driver.getCurrentUrl());
     }
 
@@ -25,8 +26,9 @@ public class LoginTest extends BaseTest {
     @Description("Проверка входа в систему с данными  заблокированного пользователя")
     @Test
     public void lockedLogin() {
-        loginPage.open()
-                        .login("locked_out_user", password);
+        loginPage
+                .open()
+                .login("locked_out_user", password);
         assertEquals("Epic sadface: Sorry, this user has been locked out.", loginPage.errorAlertText());
     }
 
@@ -45,8 +47,9 @@ public class LoginTest extends BaseTest {
     @Description("Проверка входа в систему с некорректными данными")
     @Test(dataProvider = "loginOrPasswordData")
     public void checkErrorAuth(String user, String pass, String exception){
-        loginPage.open()
-                        .login(user,pass);
+        loginPage
+                .open()
+                .login(user,pass);
         assertEquals(exception, loginPage.errorAlertText());
     }
 }

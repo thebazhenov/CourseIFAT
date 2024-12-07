@@ -10,10 +10,12 @@ public class ProductsTest extends BaseTest{
     @Description("Добавление товаров в корзину")
     @Test
     public void addProductItem(){
-        loginPage.open()
-                        .login(user, password);
+        loginPage
+                .open()
+                .login(user, password);
 
-        productsPage.addPositionToCart(3)
+        productsPage
+                .addPositionToCart(3)
                 .goToCart();
 
         assertEquals(productsPage.checkItemDivCart(), 3);
@@ -25,10 +27,12 @@ public class ProductsTest extends BaseTest{
     @Test
     public void removeItem(){
 
-        loginPage.open()
+        loginPage
+                .open()
                 .login(user, password);
 
-        productsPage.addPositionToCart(2)
+        productsPage
+                .addPositionToCart(2)
                 .goToCart()
                 .removeItem(1);
 
@@ -41,7 +45,8 @@ public class ProductsTest extends BaseTest{
     @Test
     public void countMainPageItemAdd(){
 
-        loginPage.open()
+        loginPage
+                .open()
                 .login(user, password);
 
         productsPage.addPositionToCart(3);
