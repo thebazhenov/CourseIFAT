@@ -9,11 +9,11 @@ import java.util.List;
 
 public class ProductsPage extends BasePage{
 
-    private final By BUTTON_ADD_CART = By.xpath("//button[contains(text(), 'Add to cart')]");
-    private final By ICON_CART = By.xpath("//a[@class='shopping_cart_link']");
-    private final By CART_BADGE = By.xpath("//span[@class='shopping_cart_badge']");
-    private final By ITEM_DIV_IN_CART = By.xpath("//div[@class='cart_item']");
-    private final By REMOVE_BUTTON_IN_CART = By.xpath("//button[contains(text(), 'Remove')]");
+    private static final By BUTTON_ADD_CART = By.xpath("//button[contains(text(), 'Add to cart')]");
+    private static final By ICON_CART = By.xpath("//a[@class='shopping_cart_link']");
+    private static final By CART_BADGE = By.xpath("//span[@class='shopping_cart_badge']");
+    private static final By ITEM_DIV_IN_CART = By.xpath("//div[@class='cart_item']");
+    private static final By REMOVE_BUTTON_IN_CART = By.xpath("//button[contains(text(), 'Remove')]");
 
     public ProductsPage(WebDriver driver) {
         super(driver);
