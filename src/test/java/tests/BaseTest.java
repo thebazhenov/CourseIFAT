@@ -27,7 +27,6 @@ public class BaseTest {
     @BeforeMethod
     @Description("Открытие")
     public void setup_setting(@Optional("chrome") String browser, ITestContext context) {
-        System.out.println("Browser parameter: " + browser);
         if (browser.equalsIgnoreCase("chrome")) {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("start-maximized");
