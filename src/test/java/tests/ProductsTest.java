@@ -13,11 +13,9 @@ public class ProductsTest extends BaseTest{
         loginPage
                 .open()
                 .login(user, password);
-
         productsPage
                 .addPositionToCart(3)
                 .goToCart();
-
         assertEquals(productsPage.checkItemDivCart(), 3);
     }
 
@@ -26,16 +24,13 @@ public class ProductsTest extends BaseTest{
     @Description("Проверка удаления товара из корзины")
     @Test
     public void removeItem(){
-
         loginPage
                 .open()
                 .login(user, password);
-
         productsPage
                 .addPositionToCart(2)
                 .goToCart()
                 .removeItem(1);
-
         assertEquals(productsPage.checkItemDivCart(), 1);
     }
 
@@ -44,13 +39,10 @@ public class ProductsTest extends BaseTest{
     @Description("Проверка входа в систему с корректными данными")
     @Test
     public void countMainPageItemAdd(){
-
         loginPage
                 .open()
                 .login(user, password);
-
         productsPage.addPositionToCart(3);
-
         assertEquals(productsPage.checkCartBadge(), 3);
     }
 }

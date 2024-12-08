@@ -13,7 +13,6 @@ import pages.LoginPage;
 import pages.ProductsPage;
 import utils.PropertyReader;
 
-
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -35,7 +34,6 @@ public class BaseTest {
         } else if (browser.equalsIgnoreCase("safari")) {
             driver = new SafariDriver();
         }
-
         driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
         context.setAttribute("driver", driver);
         loginPage = new LoginPage(driver);
@@ -46,7 +44,6 @@ public class BaseTest {
         password = PropertyReader.getProperty("sauce.password");
 
     }
-
 
     @AfterMethod
     @Description("Закрытие")

@@ -24,10 +24,8 @@ public class ProductsPage extends BasePage{
         List<WebElement> positions = wait.until(ExpectedConditions.elementToBeClickable(BUTTON_ADD_CART)).findElements(BUTTON_ADD_CART);
         int count = 0;
         for(WebElement position: positions){
-
             position.click();
             count ++;
-
             if(count==howMuch){
                 break;
             }

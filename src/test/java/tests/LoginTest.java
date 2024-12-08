@@ -4,7 +4,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import io.qameta.allure.*;
 import utils.PropertyReader;
-
+import utils.AllureUtils;
 
 import static org.testng.Assert.assertEquals;
 import static pages.BasePage.BASE_URL;

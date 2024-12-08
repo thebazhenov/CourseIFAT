@@ -15,7 +15,7 @@
         <testng.version>7.4.0</testng.version>
         <selenium.version>4.21.0</selenium.version>
         <allure.version>2.13.9</allure.version>
-        <apache.maven.vesrion>3.0.0-M3</apache.maven.vesrion>
+        <apache.maven.version>3.0.0-M3</apache.maven.version>
         <allure.maven.plugin.version>2.10.0</allure.maven.plugin.version>
     </properties>
 
@@ -52,7 +52,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>${apache.maven.vesrion}</version>
+                <version>${apache.maven.version}</version>
                 <configuration>
                     <argLine>
                         -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar -Xmx256m
