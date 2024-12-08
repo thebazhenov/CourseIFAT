@@ -16,7 +16,7 @@
         <selenium.version>4.21.0</selenium.version>
         <allure.version>2.13.9</allure.version>
         <apache.maven.vesrion>3.0.0-M3</apache.maven.vesrion>
-        <allure.maven.plugin.versiom>2.10.0</allure.maven.plugin.versiom>
+        <allure.maven.plugin.version>2.10.0</allure.maven.plugin.version>
     </properties>
 
     <dependencies>
@@ -62,7 +62,7 @@
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
-                <version>${allure.maven.plugin.versiom}</version>
+                <version>${allure.maven.plugin.version}</version>
             </plugin>
         </plugins>
     </build>
