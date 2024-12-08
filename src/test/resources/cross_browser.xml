@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="SauceDemo Smoke Test" parallel="tests">
+    <!-- Тест для браузера Chrome -->
+    <test name="Chrome Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <!-- Тест для браузера Safari -->
+    <test name="Safari Test">
+        <parameter name="browser" value="safari"/>
+        <classes>
+            <class name="tests.ProductsTest"/>
+        </classes>
+    </test>
+</suite>
